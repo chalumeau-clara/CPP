@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 // I use the Knuth–Morris–Pratt algorithm
-#include "Find_Motive.h"
+#include "find_motive.h"
 
 // Create the fallback list
 void preTraitment(string motive, int f[]) {

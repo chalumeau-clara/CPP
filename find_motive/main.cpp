@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Find_Motive.h"
+#include "find_motive.h"
 #include <fstream>
 #include <sstream>
 #include <string>
