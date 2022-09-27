@@ -1,0 +1,14 @@
+# Code review (groupe 19: Clara Chalumeau et Clarel Salassa pour groupe 20: MAILLET Arnaud et Amine Ahdadouch)
+
+## Pour le code en général :
+En c++ il vaut mieux utiliser *\#pragma once* au lieu de *\#ifndef*, plus optimisé et moins de bug.
+Mettre les *includes* dans le .h et ne pas mettre dans les deux. 
+Utilisation de *using namespace std* pour éviter d'écrire std partout.
+
+## Is prime: 
+Vous auriez pu un peu optimiser la boucle comme éviter les multiples de deux et aller jusqu’à la racine du nombre. 
+Dans le .h, vous avez mis void parse(char *numbers*[]); tandis que dans le .c void parse(char *buff*[]);
+A titre indicatif, vous n'avez pas besoins de parser les inputs avec getline vous pouvez juste récupérer les nombre avec une boucle while et std::cin >> nombre.
+
+## Find motive :
+Pour une meilleure gérance des fonctions, la *motive* dois juste retourner le nb de motif et ne doit pas gérer les erreurs d'ouverture de fichier qui elles, devraient être gérer dans le main.
