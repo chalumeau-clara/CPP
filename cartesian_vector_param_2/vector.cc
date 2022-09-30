@@ -2,71 +2,92 @@
 // Created by clara on 29/09/22.
 //
 #include "vector.hh"
+
+const int& Vector::operator[](size_t pos) const{
+    return vect[pos];
+}
+
+int& Vector::operator[](size_t pos){
+    return vect[pos];
+}
+
 Vector& Vector::operator+=(const Vector& rhs) {
-    for (int i = 0; i < rhs.size(); i++) {
-        vect[i] += rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        vect[i] += rhs[i];
+    }
+    return *this;
+}
+
+Vector& Vector::operator+=(int scalar)  {
+    for (int i = 0; i < NDIM; i++) {
+        vect[i] += scalar;
     }
     return *this;
 }
 
 Vector& Vector::operator-=(const Vector& rhs){
-    for (int i = 0; i < rhs.size(); i++) {
-        vect[i] -= rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        vect[i] -= rhs[i];
     }
     return *this;
 }
 Vector& Vector::operator*=(const Vector& rhs) {
-    for (int i = 0; i < rhs.size(); i++) {
-        vect[i] *= rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        vect[i] *= rhs[i];
     }
     return *this;
 }
 
-ostream& operator<<(ostream& out, const Vector& rhs) {
-    if (! rhs.empty()) {
-        cout<<'{';
+
+Vector& Vector::operator*=(const int& scalar) {
+    for (int i = 0; i < NDIM; i++) {
+        vect[i] *= scalar;
+    }
+    return *this;
+}
+
+
+ostream& operator<<(ostream& os, const Vector& rhs) {
+        os<<'{';
         int i = 0;
-        for (; i < rhs.size() - 1; i++) {
-            out<<rhs.vect[i]<<',';
+        for (; i < NDIM - 1; i++) {
+            os<<rhs[i]<<',';
         }
-        out<<rhs.vect[i]<<"}";
-    }
-    else {
-        cout<<"{}";
-    }
+        os<<rhs[i]<<"}";
+        return os;
 }
 Vector operator+(const Vector& lhs, const Vector& rhs) {
     Vector v = Vector();
-    for (int i = 0; i < rhs.size(); i++) {
-        v.vect[i] = lhs.vect[i] + rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        v[i] = lhs[i] + rhs[i];
     }
     return v;
 }
 Vector operator-(const Vector& lhs, const Vector& rhs)  {
     Vector v = Vector();
-    for (int i = 0; i < rhs.size(); i++) {
-        v.vect[i] = lhs.vect[i] - rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        v[i] = lhs[i] - rhs[i];
     }
     return v;
 }
 Vector operator*(const Vector& lhs, int scalar) {
     Vector v = Vector();
-    for (int i = 0; i < lhs.size(); i++) {
-        v.vect[i] = lhs.vect[i] * scalar;
+    for (int i = 0; i < NDIM; i++) {
+        v[i] = lhs[i] * scalar;
     }
     return v;
 }
 Vector operator*(int scalar, const Vector& rhs) {
     Vector v = Vector();
-    for (int i = 0; i < rhs.size(); i++) {
-        v.vect[i] = scalar* rhs.vect[i];
+    for (int i = 0; i < NDIM; i++) {
+        v[i] = scalar* rhs[i];
     }
     return v;
 }
 int operator*(const Vector& lhs, const Vector& rhs) {
-    Vector v = Vector();
-    for (int i = 0; i < rhs.size(); i++) {
-        v.vect[i] = lhs.vect[i] * rhs.vect[i];
+    int sum = 0;
+    for (int i = 0; i < NDIM; i++) {
+        sum += lhs[i] * rhs[i];
     }
-    return v;
+    return sum;
 }
