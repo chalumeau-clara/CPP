@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
         cout<<"The file " << path << " could not be opened.\n";
         return 1;
     }
-
+    
     string mystring = string((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
-
+    
     num = find_motive(mystring, motive);
 
     cout<<"The file " << path << " contains "<< num << " words containing the motive " << motive << "\n";

@@ -13,7 +13,7 @@ void badHeuristic(string str, int size, int badchar[NO_OF_CHARS])
         badchar[i] = -1;
 
     for ( i = 0; i < size; i++)
-        badchar[(int) str[i]] = i;
+        badchar[(int) str[i]] = i; 
 }
 
 
@@ -37,7 +37,7 @@ int find_motive(string txt, string motive)
         }
 
         if (j < 0)
-        {
+        {            
             count++;
             while (txt[s] != ' ' && txt[s] != '\n' && s <= n)
             {

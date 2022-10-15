@@ -18,33 +18,33 @@ public:
 
 // Add suitable constructors
     Vector(){
-        for(int i = 0; i < NDIM; i++)
+        for(value i = 0; i < NDIM; i++)
         {
             vect[i] = 0;
         }
     };
-    Vector(initializer_list<int> li)
+    Vector(initializer_list<value> li)
     {
-        int count = 0;
-        for (int element : li) {
+        value count = 0;
+        for (value element : li) {
             vect[count] = element;
             ++count;
         }
     };
     // possibly more
 // Public Member functions here
-    const int& operator[](size_t pos) const;
-    int& operator[](size_t pos);
+    const value& operator[](size_t pos) const;
+    value& operator[](size_t pos);
     Vector& operator+=(const Vector& rhs);
-    Vector& operator+=(int scalar);
+    Vector& operator+=(value scalar);
     Vector& operator-=(const Vector& rhs);
     Vector& operator*=(const Vector& rhs);
-    Vector& operator*=(const int& scalar);
+    Vector& operator*=(const value& scalar);
     // More to go
 
 private:
 // Private Member functions here
-    int vect[NDIM];
+    value vect[NDIM];
 // Member variables are ALWAYS private, and they go here
 };
 
@@ -52,6 +52,6 @@ private:
 ostream& operator<<(ostream& os, const Vector& rhs);
 Vector operator+(const Vector& lhs, const Vector& rhs);
 Vector operator-(const Vector& lhs, const Vector& rhs);
-Vector operator*(const Vector& lhs, int scalar);
-Vector operator*(int scalar, const Vector& rhs);
-int operator*(const Vector& lhs, const Vector& rhs);
+Vector operator*(const Vector& lhs, value scalar);
+Vector operator*(value scalar, const Vector& rhs);
+value operator*(const Vector& lhs, const Vector& rhs);

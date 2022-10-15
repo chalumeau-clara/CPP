@@ -3,11 +3,11 @@
 //
 #include "vector.hh"
 
-const int& Vector::operator[](size_t pos) const{
+const value& Vector::operator[](size_t pos) const{
     return vect[pos];
 }
 
-int& Vector::operator[](size_t pos){
+value& Vector::operator[](size_t pos){
     return vect[pos];
 }
 
@@ -18,7 +18,7 @@ Vector& Vector::operator+=(const Vector& rhs) {
     return *this;
 }
 
-Vector& Vector::operator+=(int scalar)  {
+Vector& Vector::operator+=(value scalar)  {
     for (int i = 0; i < NDIM; i++) {
         vect[i] += scalar;
     }
@@ -39,7 +39,7 @@ Vector& Vector::operator*=(const Vector& rhs) {
 }
 
 
-Vector& Vector::operator*=(const int& scalar) {
+Vector& Vector::operator*=(const value& scalar) {
     for (int i = 0; i < NDIM; i++) {
         vect[i] *= scalar;
     }
@@ -70,22 +70,22 @@ Vector operator-(const Vector& lhs, const Vector& rhs)  {
     }
     return v;
 }
-Vector operator*(const Vector& lhs, int scalar) {
+Vector operator*(const Vector& lhs, value scalar) {
     Vector v = Vector();
     for (int i = 0; i < NDIM; i++) {
         v[i] = lhs[i] * scalar;
     }
     return v;
 }
-Vector operator*(int scalar, const Vector& rhs) {
+Vector operator*(value scalar, const Vector& rhs) {
     Vector v = Vector();
     for (int i = 0; i < NDIM; i++) {
         v[i] = scalar* rhs[i];
     }
     return v;
 }
-int operator*(const Vector& lhs, const Vector& rhs) {
-    int sum = 0;
+value operator*(const Vector& lhs, const Vector& rhs) {
+    value sum = 0;
     for (int i = 0; i < NDIM; i++) {
         sum += lhs[i] * rhs[i];
     }

@@ -1,0 +1,10 @@
+Salut les khoya,
+
+Pour la Code Review:
+
+Pas mal, vous avez juste pas les mêmes codes.
+Il y a pas grand chose à dire du coup ça va être assez court.
+Elodie tu as oublié de push le fichier CmakeLists.txt et le nom du dossier c’est “cartesian_vector_param” pas “cartesian_param”. Tu as aussi du code mort en commentaire, il faut penser à le retirer.
+Pour ce qui est d’Hany et du reste RAS.
+
+Bonne soirée les gars,
