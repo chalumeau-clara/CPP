@@ -20,3 +20,6 @@ add_executable(main main.cc)
 target_link_libraries(main vector1)
 
 #target_link_libraries(main mysource_2)
+
+# Compilation optimization
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
