@@ -3,13 +3,10 @@
 
 int main()
 {
-    long double num;
-    std::cout.precision(30);
-
-    while (std::cin >> num)
+    long long int i;
+    while (std::cin >> i)
     {
-        is_prime(num) ? std::cout << num << " is a prime: True\n" : std::cout << num << " is a prime: False\n";
+        std::cout << i << " is a prime: " << (is_prime(i) ? "True" : "False") << std::endl;
     }
-
     return 0;
 }

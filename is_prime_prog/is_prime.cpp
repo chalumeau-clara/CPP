@@ -1,19 +1,21 @@
 #include "is_prime.h"
-#include <cmath>
 
-bool is_prime(long double number)
+
+bool is_prime(long long int n)
 {
-    if (number <= 1)
+    if (n < 2)
         return false;
-    if (number <= 3)
+    if (n == 2) {
         return true;
-    if (fmodl(number,2) == 0 || fmodl(number,3) == 0)
+    }
+    if (n % 2 == 0) {
         return false;
-
-    for (int i = 5; i * i <= number; i = i + 6)
-        if (fmodl(number,i) == 0 || fmodl(number, (i + 2)) == 0)
+    }
+    for (long long int i = 3; i * i <= n; i += 2) {
+        if (n % i == 0) {
             return false;
+        }
+    }
     return true;
 }
-
 

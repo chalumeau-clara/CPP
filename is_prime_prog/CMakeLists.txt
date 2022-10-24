@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 # set the project name
-project(MyFirstProg)
+project(is_prime_prog)
 
 # add the lib
 #add_library(mysource SHARED sources.cpp)
