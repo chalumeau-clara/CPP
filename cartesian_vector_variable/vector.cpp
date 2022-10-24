@@ -6,11 +6,15 @@
 
 
 Vector::Vector(const Vector &v) {
-    for (int i=0; i<size_vector; ++i)  this[i] = v[i];
+    this->vect = std::make_unique<value[]>(v.size());
+    for (size_t i = 0; i < v.size() ; ++i) vect[i] = v[i];
     size_vector = v.size();
 }
 
-Vector& Vector::operator=(const Vector&) {
+Vector& Vector::operator=(const Vector &v) {
+    this->vect = std::make_unique<value[]>(v.size());
+    for (size_t i = 0; i < v.size() ; ++i) vect[i] = v[i];
+    size_vector = v.size();
     return *this;
 }
 
