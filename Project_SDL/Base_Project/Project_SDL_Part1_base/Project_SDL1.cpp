@@ -36,7 +36,14 @@ namespace
     {
         // Helper function to load a png for a specific surface
         // See SDL_ConvertSurface
-        return nullptr;
+        SDL_Surface *loaded_surface = IMG_Load(path.c_str());
+        if (loaded_surface == nullptr)
+          throw std::runtime_error(
+              "load_surface_for(): Unable to load image " + path +
+              "! SDL_image Error: " + std::string(IMG_GetError()));
+
+        return SDL_ConvertSurface(loaded_surface, window_surface_ptr->format,
+                                  0);
     }
 } // namespace
 
@@ -73,7 +80,35 @@ void animal::draw()
 
 void sheep::move()
 {
-    // todo: Implement the move function for the sheep
+  // Randomly move the sheep
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> dis(0, 3);
+  int direction = dis(gen);
+  switch (direction) {
+  case 0:
+    x_pos++;
+    break;
+  case 1:
+    x_pos--;
+    break;
+  case 2:
+    y_pos++;
+    break;
+  case 3:
+    y_pos--;
+    break;
+  }
+
+  // Make sure the sheep stays in the frame
+  if (x_pos + image_ptr_->w > frame_width)
+    x_pos = frame_width - image_ptr_->w;
+  if (x_pos < 0)
+    x_pos = 0;
+  if (y_pos + image_ptr_->h > frame_height)
+    y_pos = frame_height - image_ptr_->h;
+  if (y_pos < 0)
+    y_pos = 0;
 }
 
 //wolf::wolf(const std::string &file_path, SDL_Surface *window_surface_ptr)
@@ -83,7 +118,35 @@ void sheep::move()
 
 void wolf::move()
 {
-    // todo: Implement the move function for the wolf
+  // Randomly move the sheep
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> dis(0, 3);
+  int direction = dis(gen);
+  switch (direction) {
+  case 0:
+    x_pos += 10;
+    break;
+  case 1:
+    x_pos -= 10;
+    break;
+  case 2:
+    y_pos += 10;
+    break;
+  case 3:
+    y_pos -= 10;
+    break;
+  }
+
+  // Make sure the sheep stays in the frame
+  if (x_pos + image_ptr_->w > frame_width)
+    x_pos = frame_width - image_ptr_->w;
+  if (x_pos < 0)
+    x_pos = 0;
+  if (y_pos + image_ptr_->h > frame_height)
+    y_pos = frame_height - image_ptr_->h;
+  if (y_pos < 0)
+    y_pos = 0;
 }
 
 ground::ground(SDL_Surface *window_surface_ptr) : window_surface_ptr_(window_surface_ptr) {};
@@ -121,16 +184,22 @@ application::application(unsigned int n_sheep, unsigned int n_wolf){
     // Get window surface
     window_surface_ptr_ = SDL_GetWindowSurface(window_ptr_);
 
+    SDL_Renderer *renderer = SDL_CreateRenderer(window_ptr_, -1, 0);
+    SDL_SetRenderDrawColor(renderer, 255, 192, 203, 255);
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
+    SDL_Delay(2000);
+
     // Create the ground
     ground ground(window_surface_ptr_);
 
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
-        ground.add_animal(
-            std::make_unique<sheep>("media/sheep.png", window_surface_ptr_));
+      ground.add_animal(
+          std::make_unique<sheep>("../media/sheep.png", window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
-        ground.add_animal(
-            std::make_unique<wolf>("media/wolf.png", window_surface_ptr_));
+      ground.add_animal(
+          std::make_unique<wolf>("../media/wolf.png", window_surface_ptr_));
 
     // Main loop
     bool quit = false;
