@@ -36,6 +36,7 @@ namespace
     {
         // Helper function to load a png for a specific surface
         // See SDL_ConvertSurface
+        return nullptr;
     }
 } // namespace
 
@@ -53,7 +54,7 @@ animal::animal(const std::string &file_path, SDL_Surface *window_surface_ptr)
     y_pos = dis2(gen);
 }
 
-animal::~animal(){};
+// animal::~animal(){};
 
 void animal::draw()
 {
@@ -65,29 +66,27 @@ void animal::draw()
     SDL_BlitSurface(image_ptr_, nullptr, window_surface_ptr_, &rect);
 }
 
-sheep::sheep(const std::string &file_path, SDL_Surface *window_surface_ptr)
-    : animal(file_path, window_surface_ptr){};
+//sheep::sheep(const std::string &file_path, SDL_Surface *window_surface_ptr)
+//    : animal(file_path, window_surface_ptr){};
 
-sheep::~sheep(){};
+// sheep::~sheep(){};
 
 void sheep::move()
 {
     // todo: Implement the move function for the sheep
 }
 
-wolf::wolf(const std::string &file_path, SDL_Surface *window_surface_ptr)
-    : animal(file_path, window_surface_ptr){};
+//wolf::wolf(const std::string &file_path, SDL_Surface *window_surface_ptr)
+//    : animal(file_path, window_surface_ptr){};
 
-wolf::~wolf(){};
+//wolf::~wolf(){};
 
 void wolf::move()
 {
     // todo: Implement the move function for the wolf
 }
 
-ground::ground(SDL_Surface *window_surface_ptr)
-    : window_surface_ptr_(window_surface_ptr)
-{}
+ground::ground(SDL_Surface *window_surface_ptr) : window_surface_ptr_(window_surface_ptr) {};
 
 void ground::add_animal(std::unique_ptr<animal> animal_ptr)
 {
@@ -109,8 +108,7 @@ void ground::update()
         animal_ptr->draw();
 }
 
-application::application(unsigned int n_sheep, unsigned int n_wolf)
-{
+application::application(unsigned int n_sheep, unsigned int n_wolf){
     // Create the window
     window_ptr_ = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED,
                                    SDL_WINDOWPOS_UNDEFINED, frame_width,

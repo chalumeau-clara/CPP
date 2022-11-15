@@ -37,7 +37,7 @@ public:
     animal(const std::string &file_path, SDL_Surface *window_surface_ptr);
     // todo: The constructor has to load the sdl_surface that corresponds to the
     // texture
-    ~animal(){}; // todo: Use the destructor to release memory and "clean up
+    ~animal()= default; // todo: Use the destructor to release memory and "clean up
                  // behind you"
 
     void
@@ -45,7 +45,7 @@ public:
               // Note that this function is not virtual, it does not depend
               // on the static type of the instance
 
-    virtual void move(); // todo: Animals move around, but in a different
+    virtual void move() = 0; // todo: Animals move around, but in a different
                                // fashion depending on which type of animal
 };
 
@@ -57,7 +57,7 @@ public:
         : animal(file_path, window_surface_ptr){};
 
     // Destructor
-    ~sheep(){};
+    ~sheep()= default;
     void move() override;
 };
 
@@ -67,7 +67,7 @@ public:
     wolf(const std::string &file_path, SDL_Surface *window_surface_ptr)
         : animal(file_path, window_surface_ptr){};
 
-    ~wolf(){};
+    ~wolf()= default;
     void move() override;
 
 };
@@ -86,9 +86,10 @@ private:
     unsigned frame_rate = 0;
 
 public:
-    ground(SDL_Surface *window_surface_ptr) 
-        : window_surface_ptr_(window_surface_ptr){};
-    ~ground(){}; // todo: Dtor, again for clean up (if necessary)
+
+    ground(SDL_Surface *window_surface_ptr);
+
+    ~ground()= default; // todo: Dtor, again for clean up (if necessary)
     void add_animal(std::unique_ptr<animal> animal_ptr);
     void update(); // todo: "refresh the screen": Move animals and draw them
     // Possibly other methods, depends on your implementation
@@ -104,10 +105,10 @@ private:
     SDL_Event window_event_;
 
     // Other attributes here, for example an instance of ground
-    ground ground_;
+    ground ground_ = ground(nullptr);
 
 public:
-    application(unsigned n_sheep, unsigned n_wolf); // Ctor
+    application(unsigned int n_sheep, unsigned int n_wolf); // Ctor
     ~application(); // dtor
 
     int loop(unsigned period); // main loop of the application.
