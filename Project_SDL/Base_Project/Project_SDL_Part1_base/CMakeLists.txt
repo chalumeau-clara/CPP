@@ -34,4 +34,5 @@ ELSE()
 
   add_executable(SDL_part1 main.cpp Project_SDL1.cpp)
   target_link_libraries(SDL_part1 ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 ENDIF()

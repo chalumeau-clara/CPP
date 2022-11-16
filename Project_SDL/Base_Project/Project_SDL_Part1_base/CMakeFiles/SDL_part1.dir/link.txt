@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/SDL_part1.dir/main.cpp.o CMakeFiles/SDL_part1.dir/Project_SDL1.cpp.o -o SDL_part1  /usr/lib/x86_64-linux-gnu/libSDL2.so -lSDL2_image 
