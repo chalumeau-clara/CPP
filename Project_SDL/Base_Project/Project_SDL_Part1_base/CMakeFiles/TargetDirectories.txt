@@ -1,3 +1,0 @@
-/home/nathan/epita/SDL_CPP/Project_SDL/Base_Project/Project_SDL_Part1_base/CMakeFiles/SDL_part1.dir
-/home/nathan/epita/SDL_CPP/Project_SDL/Base_Project/Project_SDL_Part1_base/CMakeFiles/edit_cache.dir
-/home/nathan/epita/SDL_CPP/Project_SDL/Base_Project/Project_SDL_Part1_base/CMakeFiles/rebuild_cache.dir

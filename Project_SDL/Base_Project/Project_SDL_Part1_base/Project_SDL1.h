@@ -10,9 +10,10 @@
 #include <memory>
 #include <optional>
 #include <vector>
+#include <random>
 
 // Defintions
-constexpr double frame_rate = 60.0; // refresh rate
+constexpr double frame_rate = 30.0; // refresh rate
 constexpr double frame_time = 1. / frame_rate;
 constexpr unsigned frame_width = 1400; // Width of window in pixel
 constexpr unsigned frame_height = 900; // Height of window in pixel
@@ -32,6 +33,8 @@ protected:
                            // load_surface_for
   uint64_t x_pos = 0;      // x position of the Animal
   uint64_t y_pos = 0;      // y position of the Animal
+  uint64_t x_move = 3;     // 0 left; 1 straight; 2 right
+  uint64_t y_move = 3;     // 0 down; 1 straight; 2 upp
 
 public:
     animal(const std::string &file_path, SDL_Surface *window_surface_ptr);
@@ -47,6 +50,7 @@ public:
 
     virtual void move() = 0; // todo: Animals move around, but in a different
                                // fashion depending on which type of animal
+   uint64_t random_move(uint64_t move);
 };
 
 class sheep : public animal
@@ -105,7 +109,7 @@ protected:
   SDL_Event window_event_;
 
   // Other attributes here, for example an instance of ground
-  ground ground_ = ground(nullptr);
+  ground ground_ = ground(window_surface_ptr_);
 
 public:
     application(unsigned int n_sheep, unsigned int n_wolf); // Ctor
