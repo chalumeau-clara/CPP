@@ -257,7 +257,7 @@ int application::loop(unsigned period)
     bool quit = false;
     auto start = SDL_GetTicks();
     SDL_Event e;
-    while (!quit&& (SDL_GetTicks() - start < 10000))
+    while (!quit&& (SDL_GetTicks() - start < period * 1000))
     {
         // Handle events on queue
         while (SDL_PollEvent(&e) != 0)
