@@ -11,6 +11,7 @@
 #include <optional>
 #include <vector>
 #include <random>
+#include <list>
 
 // Defintions
 constexpr double frame_rate = 30.0; // refresh rate
@@ -40,7 +41,7 @@ public:
     animal(const std::string &file_path, SDL_Surface *window_surface_ptr);
     // todo: The constructor has to load the sdl_surface that corresponds to the
     // texture
-    ~animal()= default; // todo: Use the destructor to release memory and "clean up
+    virtual ~animal(); // todo: Use the destructor to release memory and "clean up
                  // behind you"
 
     void
@@ -86,8 +87,9 @@ protected:
 
   // Some attribute to store all the wolves and sheep
   // here
-  std::vector<std::shared_ptr<animal>> animals_;
-  unsigned frame_rate = 0;
+  std::list<std::shared_ptr<animal>> animals_;
+  uint64_t nb_sheep = 0;
+  uint64_t nb_wolf = 0;
 
 public:
 
@@ -96,6 +98,9 @@ public:
     ~ground()= default; // todo: Dtor, again for clean up (if necessary)
     void add_animal(std::unique_ptr<animal> animal_ptr);
     void update(); // todo: "refresh the screen": Move animals and draw them
+    void set_nb_sheep(uint64_t nb);
+    void set_nb_wolf(uint64_t nb);
+    void add_random();
     // Possibly other methods, depends on your implementation
 };
 
