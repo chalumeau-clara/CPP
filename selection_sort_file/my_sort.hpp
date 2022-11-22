@@ -25,6 +25,8 @@ void my_selection_sort( Iterator begin, Iterator end) {
         }
 
         // swap the min to the it place
-        std::swap(*it, *minIt);
+        auto temp = *it;
+        *it = *minIt;
+        *minIt = temp;
     }
 }
