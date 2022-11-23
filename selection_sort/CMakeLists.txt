@@ -11,7 +11,7 @@ project(selection_sort)
 #add_library(mysource_2 SHARED sources_2.cpp)
 
 # add the executable
-add_executable(selection_sort my_sort.hpp main.cc)
+add_executable(main my_sort.hpp main.cc)
 
 # Compilation optimization
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
