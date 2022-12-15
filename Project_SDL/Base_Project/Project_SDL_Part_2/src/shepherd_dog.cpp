@@ -3,3 +3,6 @@
 //
 
 #include "shepherd_dog.h"
+
+void shepherd_dog::move()
+{}

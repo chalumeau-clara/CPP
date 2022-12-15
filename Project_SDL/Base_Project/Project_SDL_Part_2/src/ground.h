@@ -4,7 +4,7 @@
 
 #ifndef CPP_GROUND_H
 #define CPP_GROUND_H
-
+#include <vector.h>
 
 class ground {
 
@@ -15,6 +15,7 @@ class ground {
         // Some attribute to store all the wolves and sheep
         // here
         std::vector<std::shared_ptr<animal>> animals_;
+        std::vector<std::shared_ptr<character>> character:
         uint64_t nb_sheep = 0;
         uint64_t nb_wolf = 0;
 

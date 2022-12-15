@@ -4,7 +4,15 @@
 
 #ifndef CPP_APPLICATION_H
 #define CPP_APPLICATION_H
-
+#include <SDL.h>
+#include <SDL_image.h>
+#include <iostream>
+#include <map>
+#include <memory>
+#include <optional>
+#include <vector>
+#include <random>
+#include <list>
 
 // Defintions
 constexpr double frame_rate = 30.0; // refresh rate
