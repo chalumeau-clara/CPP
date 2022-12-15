@@ -14,7 +14,7 @@ class ground {
 
         // Some attribute to store all the wolves and sheep
         // here
-        std::list<std::shared_ptr<animal>> animals_;
+        std::vector<std::shared_ptr<animal>> animals_;
         uint64_t nb_sheep = 0;
         uint64_t nb_wolf = 0;
 
