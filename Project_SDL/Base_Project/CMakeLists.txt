@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required (VERSION 3.0)
 
-project ("Project_SDL1")
+project ("Project_SDL2")
 
 # Pour MacOS
 find_package(SDL2 REQUIRED) # build dans variable SDL2_INCLUDE_DIRS et SDL2_LIBRARIES -> (ne fait pas de target)
@@ -11,9 +11,18 @@ set (CMAKE_CXX_STANDARD 17)
 # Schließen Sie Unterprojekte ein.
 
 add_executable(SDL_project
-Project_SDL_Part1_base/main.cpp
-Project_SDL_Part1_base/Project_SDL1.cpp
-)
+        Project_SDL_Part_2/src/main.cpp
+        Project_SDL_Part_2/src/render.cpp
+        Project_SDL_Part_2/src/render.h
+        Project_SDL_Part_2/src/animal.cpp
+        Project_SDL_Part_2/src/application.cpp
+        Project_SDL_Part_2/src/interact.cpp
+        Project_SDL_Part_2/src/playable_character.cpp
+        Project_SDL_Part_2/src/sheep.cpp
+        Project_SDL_Part_2/src/shepherd.cpp
+        Project_SDL_Part_2/src/shepherd_dog.cpp
+        Project_SDL_Part_2/src/wolf.cpp)
+
 
 # add memory leak detection
 target_compile_options(SDL_project PRIVATE -Wall -Wextra -pedantic -Werror -fsanitize=address -fno-omit-frame-pointer)

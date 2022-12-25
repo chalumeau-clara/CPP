@@ -1,10 +1,10 @@
 //
 // Created by clara on 15/12/22.
 //
-
-#include "Project_SDL1.h"
+#include "application.h"
 #include <stdio.h>
 #include <string>
+#include <iostream>
 
 int main(int argc, char* argv[]) {
 

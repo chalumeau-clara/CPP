@@ -4,6 +4,7 @@
 
 #ifndef CPP_APPLICATION_H
 #define CPP_APPLICATION_H
+#include "interact.h"
 #include <SDL.h>
 #include <SDL_image.h>
 #include <iostream>
@@ -29,13 +30,13 @@ void init();
 class application {
 
 protected:
-    // The following are OWNING ptrs
     SDL_Window *window_ptr_;
     SDL_Surface *window_surface_ptr_;
     SDL_Event window_event_;
 
     // Other attributes here, for example an instance of ground
-    ground ground_ = ground(window_surface_ptr_);
+    render render_ = render(window_surface_ptr_);
+    interact interact_ = interact();
 
 public:
     application(unsigned int n_sheep, unsigned int n_wolf); // Ctor

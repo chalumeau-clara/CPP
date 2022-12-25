@@ -36,15 +36,15 @@ application::application(unsigned int n_sheep, unsigned int n_wolf) {
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
     SDL_Delay(2000);*/
-    ground_ = ground(window_surface_ptr_);
-    ground_.set_nb_sheep(n_sheep);
-    ground_.set_nb_wolf(n_wolf);
+    render_ = render(window_surface_ptr_);
+    interact_.set_nb_sheep(n_sheep);
+    interact_.set_nb_wolf(n_wolf);
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
-        ground_.add_animal(
+        render_.add_animal(
                 std::make_unique<sheep>("media/sheep.png", window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
-        ground_.add_animal(
+        render_.add_animal(
                 std::make_unique<wolf>("media/wolf.png", window_surface_ptr_));
 }
 

@@ -4,7 +4,7 @@
 
 #ifndef CPP_PLAYABLE_CHARACTER_H
 #define CPP_PLAYABLE_CHARACTER_H
-
+#include "interact.h"
 
 class playable_character {
 
