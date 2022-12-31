@@ -21,7 +21,7 @@ add_executable(SDL_project
         Project_SDL_Part_2/src/sheep.cpp
         Project_SDL_Part_2/src/shepherd.cpp
         Project_SDL_Part_2/src/shepherd_dog.cpp
-        Project_SDL_Part_2/src/wolf.cpp)
+        Project_SDL_Part_2/src/wolf.cpp Project_SDL_Part_2/src/ground.h Project_SDL_Part_2/src/ground.cpp)
 
 
 # add memory leak detection

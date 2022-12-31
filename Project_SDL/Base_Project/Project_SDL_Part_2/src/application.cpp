@@ -3,19 +3,9 @@
 //
 
 #include "application.h"
-void init()
-{
-    // Initialize SDL
-    if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) < 0)
-        throw std::runtime_error("init():" + std::string(SDL_GetError()));
+#include "sheep.h"
+#include "wolf.h"
 
-    // Initialize PNG loading
-    int imgFlags = IMG_INIT_PNG;
-    if (!(IMG_Init(imgFlags) & imgFlags))
-        throw std::runtime_error("init(): SDL_image could not initialize! "
-                                 "SDL_image Error: "
-                                 + std::string(IMG_GetError()));
-}
 application::application(unsigned int n_sheep, unsigned int n_wolf) {
     // Create the window
     window_ptr_ = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED,
@@ -36,15 +26,15 @@ application::application(unsigned int n_sheep, unsigned int n_wolf) {
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
     SDL_Delay(2000);*/
-    render_ = render(window_surface_ptr_);
-    interact_.set_nb_sheep(n_sheep);
-    interact_.set_nb_wolf(n_wolf);
+    ground_ = ground(window_surface_ptr_);
+    ground_.set_nb_sheep(n_sheep);
+    ground_.set_nb_wolf(n_wolf);
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
-        render_.add_animal(
+        ground_.add_character(
                 std::make_unique<sheep>("media/sheep.png", window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
-        render_.add_animal(
+        ground_.add_character(
                 std::make_unique<wolf>("media/wolf.png", window_surface_ptr_));
 }
 

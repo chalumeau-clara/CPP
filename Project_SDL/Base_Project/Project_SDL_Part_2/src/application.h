@@ -5,6 +5,7 @@
 #ifndef CPP_APPLICATION_H
 #define CPP_APPLICATION_H
 #include "interact.h"
+#include "ground.h"
 #include <SDL.h>
 #include <SDL_image.h>
 #include <iostream>
@@ -27,16 +28,16 @@ constexpr unsigned frame_boundary = 100;
 // Helper function to initialize SDL
 void init();
 
-class application {
-
+class application
+{
 protected:
+    // The following are OWNING ptrs
     SDL_Window *window_ptr_;
     SDL_Surface *window_surface_ptr_;
     SDL_Event window_event_;
 
     // Other attributes here, for example an instance of ground
-    render render_ = render(window_surface_ptr_);
-    interact interact_ = interact();
+    ground ground_ = ground(window_surface_ptr_);
 
 public:
     application(unsigned int n_sheep, unsigned int n_wolf); // Ctor
