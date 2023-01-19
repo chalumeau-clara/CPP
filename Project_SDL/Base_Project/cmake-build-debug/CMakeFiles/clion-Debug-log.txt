@@ -1,0 +1,4 @@
+/snap/clion/219/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/219/bin/ninja/linux/ninja -G Ninja -S /home/clara/Projet/CPP/Project_SDL/Base_Project -B /home/clara/Projet/CPP/Project_SDL/Base_Project/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/clara/Projet/CPP/Project_SDL/Base_Project/cmake-build-debug

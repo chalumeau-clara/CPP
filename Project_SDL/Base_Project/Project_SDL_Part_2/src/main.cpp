@@ -1,13 +1,9 @@
-//
-// Created by clara on 15/12/22.
-//
-#include "application.h"
+#include "Application.h"
 #include <stdio.h>
 #include <string>
 #include <iostream>
 
-int main(int argc, char* argv[]) {
-
+int main(int argc, char *argv[]) {
     std::cout << "Starting up the application" << std::endl;
 
     if (argc != 4)
@@ -15,19 +11,19 @@ int main(int argc, char* argv[]) {
                                  "number of sheep, number of wolves, "
                                  "simulation time\n");
 
-    init();
-
+    //init();
+    (void) argv;
     std::cout << "Done with initilization" << std::endl;
 
-    application my_app(std::stoul(argv[1]), std::stoul(argv[2]));
+    //Application my_app(std::stoul(argv[1]), std::stoul(argv[2]));
 
     std::cout << "Created window" << std::endl;
 
-    int retval = my_app.loop(std::stoul(argv[3]));
+    //int retval = my_app.loop(std::stoul(argv[3]));
 
-    std::cout << "Exiting application with code " << retval << std::endl;
+    //std::cout << "Exiting application with code " << retval << std::endl;
 
-    SDL_Quit();
-
-    return retval;
+    //SDL_Quit();
+    return 0;
+    //return retval;
 }

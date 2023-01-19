@@ -1,0 +1,13 @@
+# ninja log v5
+4951	6029	1674166036707661409	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Moving_object.cpp.o	335341d3b3db78ed
+3457	4951	1674166035627629426	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o	18b4a0741c1afb3f
+2460	3457	1674166034135585252	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Playable_character.cpp.o	6ea32bcb4ee1a700
+14	2131	1674166032807545945	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Rendered_object.cpp.o	a6465ebafae2fb15
+2116	4239	1674166034915608344	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o	9a2c1d2fb7f4679a
+1996	3542	1674166034219587739	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Sheep.cpp.o	e77afdc6d9833b22
+3542	5064	1674166035743632861	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd.cpp.o	fb2e050597557328
+5	1996	1674166032675542038	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Animal.cpp.o	6f6e32de4cfa93a2
+2	1249	1674166233277854529	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/main.cpp.o	cc35e0a2beb579f0
+2131	2459	1674166033139555770	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Interacting_object.cpp.o	99ef1d7d1bf6defb
+4239	5323	1674166036003640559	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd_dog.cpp.o	1b16af979e0d2f83
+5064	6318	1674166036995669938	CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o	272633b06f27017f

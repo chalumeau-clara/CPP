@@ -1,0 +1,5 @@
+/home/clara/Projet/CPP/Project_SDL/test_SDL/test_SDL - Kopie/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/clara/Projet/CPP/Project_SDL/test_SDL/test_SDL - Kopie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/clara/Projet/CPP/Project_SDL/test_SDL/test_SDL - Kopie/cmake-build-debug/SDL_Test/CMakeFiles/SDLTest.dir
+/home/clara/Projet/CPP/Project_SDL/test_SDL/test_SDL - Kopie/cmake-build-debug/SDL_Test/CMakeFiles/edit_cache.dir
+/home/clara/Projet/CPP/Project_SDL/test_SDL/test_SDL - Kopie/cmake-build-debug/SDL_Test/CMakeFiles/rebuild_cache.dir

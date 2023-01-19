@@ -12,20 +12,20 @@ set (CMAKE_CXX_STANDARD 17)
 
 add_executable(SDL_project
         Project_SDL_Part_2/src/main.cpp
-        Project_SDL_Part_2/src/render.cpp
-        Project_SDL_Part_2/src/render.h
-        Project_SDL_Part_2/src/animal.cpp
-        Project_SDL_Part_2/src/application.cpp
-        Project_SDL_Part_2/src/interact.cpp
-        Project_SDL_Part_2/src/playable_character.cpp
-        Project_SDL_Part_2/src/sheep.cpp
-        Project_SDL_Part_2/src/shepherd.cpp
-        Project_SDL_Part_2/src/shepherd_dog.cpp
-        Project_SDL_Part_2/src/wolf.cpp Project_SDL_Part_2/src/ground.h Project_SDL_Part_2/src/ground.cpp)
+        Project_SDL_Part_2/src/Rendered_object.cpp
+        Project_SDL_Part_2/src/Animal.cpp
+        Project_SDL_Part_2/src/Application.cpp
+        Project_SDL_Part_2/src/Interacting_object.cpp
+        Project_SDL_Part_2/src/Playable_character.cpp
+        Project_SDL_Part_2/src/Sheep.cpp
+        Project_SDL_Part_2/src/Shepherd.cpp
+        Project_SDL_Part_2/src/Shepherd_dog.cpp
+        Project_SDL_Part_2/src/Moving_object.cpp
+        Project_SDL_Part_2/src/Wolf.cpp Project_SDL_Part_2/src/Ground.cpp)
 
 
 # add memory leak detection
-target_compile_options(SDL_project PRIVATE -Wall -Wextra -pedantic -Werror -fsanitize=address -fno-omit-frame-pointer)
+target_compile_options(SDL_project PRIVATE -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer)
 
 # Pour MacOS
 target_include_directories(SDL_project PRIVATE ${SDL2_INCLUDE_DIRS} SDL2_image) # ajoute les include de SDL2 -> necessaire car SDL2 n'est pas un target
