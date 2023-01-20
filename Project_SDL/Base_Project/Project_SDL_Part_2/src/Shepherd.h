@@ -14,7 +14,9 @@ public:
 
     virtual ~Shepherd() = default;
     // Fonction pour déplacement en fonction des entrées
-    void move();
+    void interact(){};
+    virtual void move() override;
+
 private:
     SDL_Event window_events;
 };

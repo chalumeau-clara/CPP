@@ -29,7 +29,7 @@ class Interacting_object {
 
 
         // Fonction virtuelle pour les interactions
-        virtual void interact(Interacting_object *other_object) = 0;
+        virtual void interact() = 0;
 
     private:
         std::set<std::string> properties_;

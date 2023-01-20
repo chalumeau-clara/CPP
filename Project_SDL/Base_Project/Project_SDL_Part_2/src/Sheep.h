@@ -11,7 +11,7 @@ public:
     Animal(sheep_texture_path, window_surface_ptr, x_position, y_position){
 
     };
-    virtual void interact(Interacting_object *other_object) override; // todo: implement
+    virtual void interact(){}; // todo: implement
 
     virtual ~Sheep(){};
 

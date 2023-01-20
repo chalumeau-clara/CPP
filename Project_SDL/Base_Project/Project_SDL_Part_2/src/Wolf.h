@@ -13,7 +13,8 @@ class Wolf : public Animal {
         virtual ~Wolf(){};
 
         // Fonction pour déplacement aléatoire
-        void move();
+        virtual void move() override;
+        void interact(){};
 
     private:
 

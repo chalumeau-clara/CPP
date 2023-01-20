@@ -13,7 +13,8 @@ public:
 
 
     // Fonction pour déplacement en suivant le berger
-    void move();
+    virtual void move() override;
+    void interact(){};
 };
 
 #endif
