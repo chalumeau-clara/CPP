@@ -41,8 +41,8 @@ private:
 protected:
     uint64_t x_pos = 0;
     uint64_t y_pos = 0;
-    uint64_t x_move = 3;     // 0 left; 1 straight; 2 right
-    uint64_t y_move = 3;     // 0 down; 1 straight; 2 upp
+    uint64_t x_move = 0;     // 0 left; 1 straight; 2 right
+    uint64_t y_move = 0;     // 0 down; 1 straight; 2 upp
 };
 
 #endif // MOVING_OBJECT_H
