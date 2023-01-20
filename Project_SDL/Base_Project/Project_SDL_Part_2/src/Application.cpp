@@ -49,6 +49,19 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
                 */
 }
 
+Application::~Application()
+{
+    SDL_FreeSurface(window_surface_ptr_);
+    // Destroy window
+    SDL_DestroyWindow(window_ptr_);
+    window_ptr_ = nullptr;
+
+    // Quit SDL subsystems
+    IMG_Quit();
+    SDL_Quit();
+}
+
+
 int Application::loop(unsigned period)
 {
     // Main loop
