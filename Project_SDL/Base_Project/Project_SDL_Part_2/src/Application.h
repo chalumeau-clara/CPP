@@ -20,7 +20,6 @@ constexpr unsigned frame_height = 900; // Height of window in pixel
 constexpr unsigned distance_shepeherd_dog = 50;
 // Minimal distance of animals to the border
 // of the screen
-constexpr unsigned frame_boundary = 100;
 // Helper function to initialize SDL
 void init();
 

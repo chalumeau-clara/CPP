@@ -10,8 +10,6 @@ public:
     Animal(shepherd_dog_texture_path, window_surface_ptr,x_position, y_position){};
     virtual ~Shepherd_dog(){};
 
-    // Shepherd_dog(SDL_Surface* window_surface_ptr):Animal("../../media/shepherd_dog.png", window_surface_ptr){};
-    // virtual ~Shepherd_dog();
 
 
     // Fonction pour déplacement en suivant le berger
