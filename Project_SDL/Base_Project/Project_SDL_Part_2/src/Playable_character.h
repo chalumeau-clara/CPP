@@ -15,6 +15,8 @@ public:
 private:
     // The keyboad event
     SDL_Event window_event_;
+protected:
+    const uint64_t walk = 6;
 };
 
 #endif // PLAYABLE_CHARACTER_H
