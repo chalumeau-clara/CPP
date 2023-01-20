@@ -19,6 +19,14 @@ void init()
                                  + std::string(IMG_GetError()));
 }
 
+uint64_t my_random()
+{
+    // Set random position of the animal
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, frame_width - 1);
+    return dis(gen);
+}
 
 Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     // Create the window
@@ -46,16 +54,22 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
         ground_.add_character(
-                std::make_unique<Sheep>(window_surface_ptr_));
+                std::make_unique<Sheep>(window_surface_ptr_, my_random(), my_random()));
     for (unsigned int i = 0; i < n_wolf; ++i)
         ground_.add_character(
-                std::make_unique<Wolf>(window_surface_ptr_));
+                std::make_unique<Wolf>(window_surface_ptr_, my_random(), my_random()));
 
-    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_));
+    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_, frame_width / 2 - 170, frame_height / 2 - 170));
 
-    for (unsigned int i = 0; i < ground_.get_nb_shephered_dog(); ++i)
-        ground_.add_character(
-                std::make_unique<Shepherd_dog>(window_surface_ptr_));
+    ground_.add_character(
+            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170 - distance_shepeherd_dog - 340 , frame_height / 2 - 170 - distance_shepeherd_dog - 340));
+    ground_.add_character(
+            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170 + distance_shepeherd_dog + 340, frame_height / 2 - 170 + distance_shepeherd_dog + 340));
+    ground_.add_character(
+            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170- distance_shepeherd_dog - 340 , frame_height / 2 - 170 + distance_shepeherd_dog + 340 ));
+    ground_.add_character(
+            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170+ distance_shepeherd_dog + 340, frame_height / 2 - 170 - distance_shepeherd_dog - 340 ));
+
 
 }
 

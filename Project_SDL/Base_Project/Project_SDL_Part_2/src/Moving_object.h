@@ -11,8 +11,11 @@ class Moving_object : public Rendered_object {
         // virtual ~Moving_object() = default;
 
         Moving_object(const std::string &file_path,
-                      SDL_Surface* window_surface_ptr):
-                      Rendered_object(file_path, window_surface_ptr){};
+                      SDL_Surface* window_surface_ptr, uint64_t x_position, uint64_t y_position):
+                      Rendered_object(file_path, window_surface_ptr){
+            x_pos = x_position;
+            y_pos = y_position;
+        };
         virtual ~Moving_object(){};
 
         // Accesseurs pour la vélocité
