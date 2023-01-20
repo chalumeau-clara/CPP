@@ -9,14 +9,14 @@ Ground::Ground(SDL_Surface *window_surface_ptr) {
 void Ground::update()
 {
     // refresh the screen": Move animals and draw them
-    for (auto &animal_ptr : character)
+    for (auto &animal_ptr : characters)
         animal_ptr->move();
 
     // Clear the screen
     SDL_FillRect(window_surface_ptr_, nullptr ,SDL_MapRGB(window_surface_ptr_->format, 0xFF, 0xFF, 0xFF));
     // Draw all animals
-    //for (auto &animal_ptr : character)
-        //animal_ptr->render_.draw(animal_ptr->get_x_pos(), animal_ptr->get_y_pos());
+    for (auto &animal_ptr : characters)
+        animal_ptr->draw(animal_ptr->get_x_pos(), animal_ptr->get_y_pos());
 }
 void Ground::set_nb_sheep(uint64_t nb) {
     nb_sheep = nb;
@@ -28,6 +28,13 @@ void Ground::set_nb_wolf(uint64_t nb){
 void Ground::set_nb_shephered_dog(uint64_t nb){
     nb_shepherd_dog = nb;
 }
+
+void Ground::add_character(std::shared_ptr<Moving_object> character)
+{
+    characters.push_back(std::move(character));
+}
+
+
 // std::vector<std::shared_ptr<Animal>>& Ground::getAnimals() {
 //     return animals_;
 // }

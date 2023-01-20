@@ -1,4 +1,6 @@
 #include "Application.h"
+#include "Sheep.h"
+#include "Wolf.h"
 
 
 void init()
@@ -31,22 +33,22 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     if (!window_surface_ptr_)
         throw std::runtime_error(std::string(SDL_GetError()));
 
-    /*SDL_Renderer *renderer = SDL_CreateRenderer(window_ptr_, -1, 0);
-    SDL_SetRenderDrawColor(renderer, 255, 192, 203, 255);
-    SDL_RenderClear(renderer);
-    SDL_RenderPresent(renderer);
-    SDL_Delay(2000);*/
+    // SDL_Renderer *renderer = SDL_CreateRenderer(window_ptr_, -1, 0);
+    // SDL_SetRenderDrawColor(renderer, 255, 192, 203, 255);
+    // SDL_RenderClear(renderer);
+    // SDL_RenderPresent(renderer);
+    // SDL_Delay(2000);
     ground_ = Ground(window_surface_ptr_);
     ground_.set_nb_sheep(n_sheep);
     ground_.set_nb_wolf(n_wolf);
     // Create the animals
-    /*for (unsigned int i = 0; i < n_sheep; ++i)
+    for (unsigned int i = 0; i < n_sheep; ++i)
         ground_.add_character(
-                std::make_unique<sheep>("media/sheep.png", window_surface_ptr_));
+                std::make_unique<Sheep>(window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
         ground_.add_character(
-                std::make_unique<wolf>("media/wolf.png", window_surface_ptr_));
-                */
+                std::make_unique<Wolf>(window_surface_ptr_));
+
 }
 
 Application::~Application()

@@ -36,3 +36,9 @@ void Moving_object::step() {
 }*/
 
 
+int Moving_object::get_x_pos() {
+    return x_pos;
+}
+int Moving_object::get_y_pos() {
+    return y_pos;
+}

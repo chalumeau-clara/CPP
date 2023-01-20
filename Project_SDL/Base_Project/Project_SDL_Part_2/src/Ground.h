@@ -17,14 +17,14 @@ public:
     void set_nb_wolf(uint64_t nb);
     void set_nb_shephered_dog(uint64_t nb);
     // std::vector<std::shared_ptr<Animal>>& getAnimals();
-    // void addAnimals(std::shared_ptr<Animal>);
+    void add_character(std::shared_ptr<Moving_object>);
     // void removeAnimals(std::shared_ptr<Animal>);
 
 protected:
     // Attention, NON-OWNING ptr, again to the screen
     SDL_Surface *window_surface_ptr_;
     // Vector of all the character present on the screen
-    std::vector<std::shared_ptr<Moving_object>> character;
+    std::vector<std::shared_ptr<Moving_object>> characters;
     uint64_t nb_sheep = 0;
     uint64_t nb_wolf = 0;
     uint64_t nb_shepherd_dog = 4;

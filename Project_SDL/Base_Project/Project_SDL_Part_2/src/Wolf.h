@@ -8,7 +8,7 @@ class Wolf : public Animal {
         // Constructeur
 
         Wolf(SDL_Surface* window_surface_ptr):
-                Animal("../../media/wolf.png", window_surface_ptr){};
+                Animal("../media/wolf.png", window_surface_ptr){};
 
         virtual ~Wolf(){};
 

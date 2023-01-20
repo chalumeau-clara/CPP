@@ -6,7 +6,7 @@
 class Shepherd_dog : public Animal {
 public:
 
-    Shepherd_dog(SDL_Surface* window_surface_ptr):Animal("../../media/shepherd_dog.png", window_surface_ptr){};
+    Shepherd_dog(SDL_Surface* window_surface_ptr):Animal("../media/shepherd_dog.png", window_surface_ptr){};
     virtual ~Shepherd_dog();
 
 

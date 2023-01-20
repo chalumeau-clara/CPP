@@ -29,8 +29,14 @@ class Moving_object : public Rendered_object {
         // Fonction pour un pas de déplacement
         void step();
 
-    private:
+        int get_x_pos();
+        int get_y_pos();
+
+
+private:
         int velocity_x, velocity_y;
+        int x_pos = 0;
+        int y_pos = 0;
 };
 
 #endif // MOVING_OBJECT_H
