@@ -35,8 +35,11 @@ class Moving_object : public Rendered_object {
 
 private:
         int velocity_x, velocity_y;
-        int x_pos = 0;
-        int y_pos = 0;
+protected:
+    uint64_t x_pos = 0;
+    uint64_t y_pos = 0;
+    uint64_t x_move = 3;     // 0 left; 1 straight; 2 right
+    uint64_t y_move = 3;     // 0 down; 1 straight; 2 upp
 };
 
 #endif // MOVING_OBJECT_H

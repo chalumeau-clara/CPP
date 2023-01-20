@@ -16,6 +16,7 @@ public:
     void set_nb_sheep(uint64_t nb);
     void set_nb_wolf(uint64_t nb);
     void set_nb_shephered_dog(uint64_t nb);
+    uint64_t get_nb_shephered_dog();
     // std::vector<std::shared_ptr<Animal>>& getAnimals();
     void add_character(std::shared_ptr<Moving_object>);
     // void removeAnimals(std::shared_ptr<Animal>);

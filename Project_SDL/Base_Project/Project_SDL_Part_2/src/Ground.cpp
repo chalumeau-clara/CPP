@@ -33,7 +33,10 @@ void Ground::add_character(std::shared_ptr<Moving_object> character)
 {
     characters.push_back(std::move(character));
 }
-
+uint64_t Ground::get_nb_shephered_dog()
+{
+    return nb_shepherd_dog;
+}
 
 // std::vector<std::shared_ptr<Animal>>& Ground::getAnimals() {
 //     return animals_;

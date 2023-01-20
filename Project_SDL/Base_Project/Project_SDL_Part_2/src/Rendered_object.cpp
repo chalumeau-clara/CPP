@@ -25,7 +25,7 @@ Rendered_object::Rendered_object(const std::string &file_path, SDL_Surface *wind
 }
 
 void Rendered_object::draw(int x_pos, int y_pos) {
-    SDL_Rect rect = {x_pos, y_pos, image_ptr_->w, image_ptr_->h};
+    SDL_Rect rect = {x_pos, y_pos, 50, 50};
     if (SDL_BlitSurface(image_ptr_, NULL, window_surface_ptr_, &rect))
         throw std::runtime_error("Could not apply texture.");
 }

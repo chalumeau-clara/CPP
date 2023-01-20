@@ -1,6 +1,8 @@
 #include "Application.h"
 #include "Sheep.h"
 #include "Wolf.h"
+#include "Shepherd_dog.h"
+#include "Shepherd.h"
 
 
 void init()
@@ -48,6 +50,12 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     for (unsigned int i = 0; i < n_wolf; ++i)
         ground_.add_character(
                 std::make_unique<Wolf>(window_surface_ptr_));
+
+    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_));
+
+    for (unsigned int i = 0; i < ground_.get_nb_shephered_dog(); ++i)
+        ground_.add_character(
+                std::make_unique<Shepherd_dog>(window_surface_ptr_));
 
 }
 
