@@ -10,13 +10,26 @@ void Ground::update()
 {
     // refresh the screen": Move animals and draw them
     for (auto &moving_obj : characters)
+    {
         moving_obj->move();
+        // interact with other animals
+        for (auto &moving_obj2 : characters){
+            if (moving_obj != moving_obj2){
+                moving_obj->interact(*moving_obj2);
+            }
+        }
+    }
 
     // Clear the screen
     SDL_FillRect(window_surface_ptr_, nullptr ,SDL_MapRGB(window_surface_ptr_->format, 0xFF, 0xFF, 0xFF));
     // Draw all animals
-    for (auto &moving_obj : characters)
-        moving_obj->draw(moving_obj->get_position()->x, moving_obj->get_position()->y);
+    for (auto &moving_obj : characters){
+        // check if the moving object got "dead" and remove it from the list
+        if (moving_obj->find_property("dead")){
+        }
+        else
+            moving_obj->draw(moving_obj->get_position()->x, moving_obj->get_position()->y);
+    }
 }
 void Ground::set_nb_sheep(uint64_t nb) {
     nb_sheep = nb;

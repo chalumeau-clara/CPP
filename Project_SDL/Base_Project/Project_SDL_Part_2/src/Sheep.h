@@ -9,6 +9,7 @@ public:
 
     Sheep(SDL_Surface* window_surface_ptr):
     Animal(sheep_texture_path, window_surface_ptr){
+        set_property("sheep");
 
     };
     virtual void interact(Interacting_object &other_object) override;

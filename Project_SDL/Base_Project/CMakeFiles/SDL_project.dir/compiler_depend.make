@@ -721,6 +721,7 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o: Project_SDL
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
   /usr/include/SDL2/SDL.h \
+  Project_SDL_Part_2/src/Animal.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -778,7 +779,6 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o: Project_SDL
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/list.tcc \
   Project_SDL_Part_2/src/Sheep.h \
-  Project_SDL_Part_2/src/Animal.h \
   Project_SDL_Part_2/src/Wolf.h \
   Project_SDL_Part_2/src/Shepherd_dog.h \
   Project_SDL_Part_2/src/Shepherd.h \
@@ -1143,6 +1143,7 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o: Project_SDL_Part
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
   /usr/include/SDL2/SDL.h \
+  Project_SDL_Part_2/src/Animal.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -4542,6 +4543,7 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/main.cpp.o: Project_SDL_Part_2
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
   /usr/include/SDL2/SDL.h \
+  Project_SDL_Part_2/src/Animal.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \

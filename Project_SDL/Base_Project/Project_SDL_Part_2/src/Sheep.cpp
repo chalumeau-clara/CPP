@@ -7,6 +7,7 @@
 // Sheep::~Sheep() {}
 
 void Sheep::interact(Interacting_object &other_object){
+    
     if (other_object.find_property("sheep")){
     }
 }

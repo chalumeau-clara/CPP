@@ -296,7 +296,9 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o: \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_image.h \
- /usr/include/SDL2/SDL.h /usr/include/c++/11/memory \
+ /usr/include/SDL2/SDL.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Animal.h \
+ /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
  /usr/include/c++/11/bits/unique_ptr.h \
@@ -339,7 +341,6 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o: \
  /usr/include/c++/11/pstl/glue_numeric_defs.h /usr/include/c++/11/list \
  /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Sheep.h \
- /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Animal.h \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Wolf.h \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd_dog.h \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd.h \

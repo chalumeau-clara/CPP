@@ -3,7 +3,7 @@
 
 #include "Animal.h"
 
-const int eat_distance = 10;
+const int eat_distance = 1;
 const int fear_distance = 10;
 
 class Wolf : public Animal {
@@ -11,7 +11,13 @@ class Wolf : public Animal {
         // Constructeur
 
         Wolf(SDL_Surface* window_surface_ptr):
-                Animal(wolf_texture_path, window_surface_ptr){};
+            Animal(wolf_texture_path, window_surface_ptr){
+                set_property("wolf");
+                set_property("alive");
+
+                setVelocityX(1);
+                setVelocityY(1);
+            };
 
         virtual ~Wolf(){};
 
@@ -20,7 +26,7 @@ class Wolf : public Animal {
         virtual void interact(Interacting_object &other_object) override;
 
     private:
-        SDL_Rect* nearest_sheep_position_;
+        SDL_Rect* nearest_sheep_position_ = nullptr;
 
     };
 

@@ -13,12 +13,12 @@ class Moving_object : public Rendered_object {
         virtual ~Moving_object(){};
 
         // Accesseurs pour la vélocité
-        //int getVelocityX() const;
-        //int getVelocityY() const;
+        int getVelocityX() const { return velocity_x_; };
+        int getVelocityY() const { return velocity_y_; };
 
         // Mutateurs pour la vélocité
-        void setVelocityX(int velocityX);
-        void setVelocityY(int velocityY);
+        void setVelocityX(int velocityX) { velocity_x_ = velocityX; };
+        void setVelocityY(int velocityY) { velocity_y_ = velocityY; };
 
         // Fonction virtuelle pour déplacement
         virtual void move() = 0;

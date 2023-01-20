@@ -2,6 +2,7 @@
 #define GROUND_H
 
 #include "Moving_object.h"
+#include "Animal.h"
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -19,7 +20,7 @@ public:
     uint64_t get_nb_shephered_dog();
     // std::vector<std::shared_ptr<Animal>>& getAnimals();
     void add_character(std::shared_ptr<Moving_object>);
-    // void removeAnimals(std::shared_ptr<Animal>);
+    void removeAnimals(std::shared_ptr<Animal>);
 
 protected:
     // Attention, NON-OWNING ptr, again to the screen
