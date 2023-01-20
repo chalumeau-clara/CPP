@@ -1,7 +1,5 @@
 #include "Shepherd.h"
 
-
-
 void Shepherd::move() {
     while(SDL_PollEvent(&window_events)) {
         switch(window_events.type) {

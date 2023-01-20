@@ -15,6 +15,7 @@ public:
     virtual ~Shepherd() = default;
     // Fonction pour déplacement en fonction des entrées
     void interact(){};
+    
     virtual void move() override;
 
 private:
