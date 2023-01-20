@@ -62,22 +62,15 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
         ground_.add_character(
-                std::make_unique<Sheep>(window_surface_ptr_, my_random_width(), my_random_heigth()));
+                std::make_unique<Sheep>(window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
         ground_.add_character(
-                std::make_unique<Wolf>(window_surface_ptr_, my_random_width(), my_random_heigth()));
+                std::make_unique<Wolf>(window_surface_ptr_));
 
-    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_, frame_width / 2 - 170, frame_height / 2 - 170));
+    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_));
 
     ground_.add_character(
-            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170 - distance_shepeherd_dog - 340 , frame_height / 2 - 170 - distance_shepeherd_dog - 340));
-    ground_.add_character(
-            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170 + distance_shepeherd_dog + 340, frame_height / 2 - 170 + distance_shepeherd_dog + 340));
-    ground_.add_character(
-            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170- distance_shepeherd_dog - 340 , frame_height / 2 - 170 + distance_shepeherd_dog + 340 ));
-    ground_.add_character(
-            std::make_unique<Shepherd_dog>(window_surface_ptr_, frame_width / 2 - 170+ distance_shepeherd_dog + 340, frame_height / 2 - 170 - distance_shepeherd_dog - 340 ));
-
+            std::make_unique<Shepherd_dog>(window_surface_ptr_));
 
 }
 

@@ -7,15 +7,15 @@ class Shepherd : public Playable_character {
 public:
 
     // Constructeur
-    Shepherd(SDL_Surface* window_surface_ptr,SDL_Event window_event, uint64_t x_position, uint64_t y_position):
-    Playable_character(shepherd_texture_path, window_surface_ptr, window_event,x_position, y_position){
+    Shepherd(SDL_Surface* window_surface_ptr,SDL_Event window_event):
+    Playable_character(shepherd_texture_path, window_surface_ptr, window_event){
         window_events = window_event;
     };
 
     virtual ~Shepherd() = default;
     // Fonction pour déplacement en fonction des entrées
-    void interact(){};
-    
+    virtual void interact(Interacting_object &other_object) override;
+
     virtual void move() override;
 
 private:

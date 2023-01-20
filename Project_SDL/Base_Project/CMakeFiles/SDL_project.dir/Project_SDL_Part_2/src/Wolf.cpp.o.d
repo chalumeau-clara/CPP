@@ -295,7 +295,7 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
- /usr/include/SDL2/SDL_image.h /usr/include/SDL2/SDL.h \
+ /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Application.h \
  /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Ground.h \

@@ -15,8 +15,7 @@
 // Defintions
 constexpr double frame_rate = 30.0; // refresh rate
 constexpr double frame_time = 1. / frame_rate;
-constexpr unsigned frame_width = 1400; // Width of window in pixel
-constexpr unsigned frame_height = 900; // Height of window in pixel
+
 constexpr unsigned distance_shepeherd_dog = 50;
 // Minimal distance of animals to the border
 // of the screen
@@ -25,8 +24,8 @@ void init();
 
 class Application {
 protected:
-            // The following are OWNING ptrs
-            SDL_Window *window_ptr_;
+    // The following are OWNING ptrs
+    SDL_Window *window_ptr_;
     SDL_Surface *window_surface_ptr_ = nullptr;
     SDL_Event window_event_;
 

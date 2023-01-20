@@ -5,8 +5,8 @@
 
 class Playable_character : public Moving_object {
 public:
-    Playable_character(const std::string &file_path, SDL_Surface* window_surface_ptr, SDL_Event window_event, uint64_t x_position, uint64_t y_position) :
-            Moving_object(file_path, window_surface_ptr,  x_position, y_position) {
+    Playable_character(const std::string &file_path, SDL_Surface* window_surface_ptr, SDL_Event window_event) :
+            Moving_object(file_path, window_surface_ptr) {
         window_event_ = window_event;
 
     }

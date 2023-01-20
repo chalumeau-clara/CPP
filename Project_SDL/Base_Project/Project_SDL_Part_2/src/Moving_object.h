@@ -6,11 +6,8 @@
 class Moving_object : public Rendered_object {
     public:
 
-        Moving_object(const std::string &file_path,
-                      SDL_Surface* window_surface_ptr, uint64_t x_position, uint64_t y_position):
-                      Rendered_object(file_path, window_surface_ptr){
-            x_pos = x_position;
-            y_pos = y_position;
+        Moving_object(const std::string &file_path, SDL_Surface* window_surface_ptr):
+            Rendered_object(file_path, window_surface_ptr){
         };
 
         virtual ~Moving_object(){};
@@ -30,17 +27,12 @@ class Moving_object : public Rendered_object {
         void step() {
         };
 
-        int get_x_pos();
-        int get_y_pos();
-
 
 private:
         int velocity_x_, velocity_y_;
 protected:
-    uint64_t x_pos = 0;
-    uint64_t y_pos = 0;
-    uint64_t x_move = 0;     // 0 left; 1 straight; 2 right
-    uint64_t y_move = 0;     // 0 down; 1 straight; 2 upp
+    int x_move = 0;     // 0 left; 1 straight; 2 right
+    int y_move = 0;     // 0 down; 1 straight; 2 upp
 };
 
 #endif // MOVING_OBJECT_H

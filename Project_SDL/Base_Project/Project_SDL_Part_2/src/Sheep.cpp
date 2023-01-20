@@ -6,44 +6,48 @@
 
 // Sheep::~Sheep() {}
 
+void Sheep::interact(Interacting_object &other_object){
+    if (other_object.find_property("sheep")){
+    }
+}
 
 void Sheep::move()
 {
     switch (x_move) {
         case 0:
-            x_pos--;
+            get_position()->x--;
             break;
         case 2:
-            x_pos++;
+            get_position()->x++;
             break;
     }
     switch (y_move) {
         case 0:
-            y_pos--;
+            get_position()->y--;
             break;
         case 2:
-            y_pos++;
+            get_position()->y++;
             break;
     }
 
     // Make sure the sheep stays in the frame
-    if (x_pos + image_ptr_->w > frame_width - frame_boundary) {
-        x_pos = frame_width - image_ptr_->w - frame_boundary;
+    if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
+        get_position()->x = frame_width - image_ptr_->w - frame_boundary;
         x_move = 0;
     }
 
-    if (x_pos < frame_boundary){
-        x_pos = frame_boundary;
+    if (get_position()->x < frame_boundary){
+        get_position()->x = frame_boundary;
         x_move = 2;
     }
 
-    if (y_pos + image_ptr_->h > frame_height - frame_boundary) {
-        y_pos = frame_height - image_ptr_->h - frame_boundary;
+    if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
+        get_position()->y = frame_height - image_ptr_->h - frame_boundary;
         y_move = 0;
     }
 
-    if (y_pos < frame_boundary){
-        y_pos = frame_boundary;
+    if (get_position()->y < frame_boundary){
+        get_position()->y = frame_boundary;
         y_move = 2;
     }
 

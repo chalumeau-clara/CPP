@@ -9,14 +9,14 @@ Ground::Ground(SDL_Surface *window_surface_ptr) {
 void Ground::update()
 {
     // refresh the screen": Move animals and draw them
-    for (auto &animal_ptr : characters)
-        animal_ptr->move();
+    for (auto &moving_obj : characters)
+        moving_obj->move();
 
     // Clear the screen
     SDL_FillRect(window_surface_ptr_, nullptr ,SDL_MapRGB(window_surface_ptr_->format, 0xFF, 0xFF, 0xFF));
     // Draw all animals
-    for (auto &animal_ptr : characters)
-        animal_ptr->draw(animal_ptr->get_x_pos(), animal_ptr->get_y_pos());
+    for (auto &moving_obj : characters)
+        moving_obj->draw(moving_obj->get_position()->x, moving_obj->get_position()->y);
 }
 void Ground::set_nb_sheep(uint64_t nb) {
     nb_sheep = nb;

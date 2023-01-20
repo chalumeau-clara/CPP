@@ -7,11 +7,11 @@ class Sheep : public Animal {
 public:
     // Constructeur
 
-    Sheep(SDL_Surface* window_surface_ptr, uint64_t x_position, uint64_t y_position):
-    Animal(sheep_texture_path, window_surface_ptr, x_position, y_position){
+    Sheep(SDL_Surface* window_surface_ptr):
+    Animal(sheep_texture_path, window_surface_ptr){
 
     };
-    virtual void interact(){}; // todo: implement
+    virtual void interact(Interacting_object &other_object) override;
 
     virtual ~Sheep(){};
 

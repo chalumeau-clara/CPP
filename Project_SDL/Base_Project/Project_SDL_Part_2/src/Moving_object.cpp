@@ -35,10 +35,3 @@ void Moving_object::step() {
     setY(getY() + velocity_y_);
 }*/
 
-
-int Moving_object::get_x_pos() {
-    return x_pos;
-}
-int Moving_object::get_y_pos() {
-    return y_pos;
-}
