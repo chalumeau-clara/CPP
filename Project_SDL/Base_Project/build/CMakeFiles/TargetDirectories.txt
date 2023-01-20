@@ -1,0 +1,3 @@
+/home/clarel-salassa/Desktop/CPP/Project_SDL/Base_Project/build/CMakeFiles/SDL_project.dir
+/home/clarel-salassa/Desktop/CPP/Project_SDL/Base_Project/build/CMakeFiles/edit_cache.dir
+/home/clarel-salassa/Desktop/CPP/Project_SDL/Base_Project/build/CMakeFiles/rebuild_cache.dir

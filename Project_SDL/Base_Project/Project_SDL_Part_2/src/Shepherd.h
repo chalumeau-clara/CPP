@@ -12,6 +12,15 @@ public:
         window_events = window_event;
     };
 
+    // Shepherd(SDL_Surface* window_surface_ptr,SDL_Event window_event):
+    // Playable_character(sheep_texture_path, window_surface_ptr, shepherd_width, shepherd_height, window_event){
+    //     set_property("shepherd");
+    //     set_property("alive");
+
+    //     get_position()->x = frame_width / 2 - shepherd_width / 2;
+    //     get_position()->y = frame_height / 2 - shepherd_height / 2;
+    // };
+
     virtual ~Shepherd() = default;
     // Fonction pour déplacement en fonction des entrées
     void move();
