@@ -68,11 +68,11 @@
 				},
 				{
 					"backtrace" : 3,
-					"fragment" : "-pedantic"
+					"fragment" : "-Werror"
 				},
 				{
 					"backtrace" : 3,
-					"fragment" : "-fsanitize=address"
+					"fragment" : "-pedantic"
 				},
 				{
 					"backtrace" : 3,

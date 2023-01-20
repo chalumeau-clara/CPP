@@ -51,84 +51,84 @@ build cmake_object_order_depends_target_SDL_project: phony || CMakeFiles/SDL_pro
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/main.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/main.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Rendered_object.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Rendered_object.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Rendered_object.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Animal.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Animal.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Animal.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Application.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Application.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Interacting_object.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Interacting_object.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Interacting_object.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Playable_character.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Playable_character.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Playable_character.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Sheep.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Sheep.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Sheep.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd_dog.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd_dog.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd_dog.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Moving_object.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Moving_object.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Moving_object.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Wolf.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src
 
 build CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o: CXX_COMPILER__SDL_project_Debug /home/clara/Projet/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Ground.cpp || cmake_object_order_depends_target_SDL_project
   DEP_FILE = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic -fsanitize=address -fno-omit-frame-pointer -std=gnu++17
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -std=gnu++17
   INCLUDES = -I/usr/include/SDL2 -I/home/clara/Projet/CPP/Project_SDL/Base_Project/SDL2_image
   OBJECT_DIR = CMakeFiles/SDL_project.dir
   OBJECT_FILE_DIR = CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src

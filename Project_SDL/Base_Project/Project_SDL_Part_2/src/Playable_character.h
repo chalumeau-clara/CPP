@@ -11,7 +11,7 @@ public:
     }
 
     // Fonction virtuelle pour déplacement
-    virtual void move() override;
+    virtual void move() override = 0;
 private:
     // The keyboad event
     SDL_Event window_event_;

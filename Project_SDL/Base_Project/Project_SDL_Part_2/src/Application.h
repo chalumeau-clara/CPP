@@ -27,7 +27,7 @@ class Application {
 protected:
             // The following are OWNING ptrs
             SDL_Window *window_ptr_;
-    SDL_Surface *window_surface_ptr_;
+    SDL_Surface *window_surface_ptr_ = NULL;
     SDL_Event window_event_;
 
     // Other attributes here, for example an instance of ground
