@@ -14,8 +14,12 @@ SDL_Surface *Rendered_object::load_surface_for(const std::string &path,
 
     auto convert = SDL_ConvertSurface(loaded_surface, window_surface_ptr->format,0);
     SDL_FreeSurface(loaded_surface);
-    return convert;
-    //return loaded_surface;
+    // Initialize new_surface with desired dimensions
+    SDL_Surface* new_surface = SDL_CreateRGBSurface(0, 50, 50, 32, 0, 0, 0, 0);
+    // Resize image_ptr_ to new_surface
+    SDL_SoftStretch(convert, NULL, new_surface, NULL);
+    // Use new_surface instead of image_ptr_ to draw
+    return new_surface;
 }
 
 Rendered_object::Rendered_object(const std::string &file_path, SDL_Surface *window_surface_ptr) {

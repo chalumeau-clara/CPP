@@ -2,16 +2,17 @@
 #define GROUND_H
 
 #include "Moving_object.h"
-#include "Animal.h"
 #include <vector>
 #include <memory>
 #include <iostream>
+
+const std::string background_texture_path = "../media/background.jpg";
 
 class Ground {
 public:
     // Constructeur
     Ground(SDL_Surface* window_surface_ptr);
-    ~Ground() = default;
+    ~Ground(){} ;
 
     void update(); // todo: "refresh the screen": Move animals and draw them
     void set_nb_sheep(uint64_t nb);
@@ -20,11 +21,12 @@ public:
     uint64_t get_nb_shephered_dog();
     // std::vector<std::shared_ptr<Animal>>& getAnimals();
     void add_character(std::shared_ptr<Moving_object>);
-    void removeAnimals(std::shared_ptr<Animal>);
+    // void removeAnimals(std::shared_ptr<Animal>);
 
 protected:
     // Attention, NON-OWNING ptr, again to the screen
     SDL_Surface *window_surface_ptr_;
+    SDL_Surface* background;
     // Vector of all the character present on the screen
     std::vector<std::shared_ptr<Moving_object>> characters;
     uint64_t nb_sheep = 0;

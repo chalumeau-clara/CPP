@@ -10,6 +10,7 @@ public:
     Shepherd(SDL_Surface* window_surface_ptr,SDL_Event window_event):
     Playable_character(shepherd_texture_path, window_surface_ptr, window_event){
         window_events = window_event;
+        set_property("shepherd");
     };
 
     virtual ~Shepherd() = default;

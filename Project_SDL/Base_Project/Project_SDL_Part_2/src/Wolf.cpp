@@ -16,7 +16,7 @@ void Wolf::interact(Interacting_object &other_object){
 
             int new_distance_x = std::abs(get_position()->x - other_object.get_position()->x);
             int new_distance_y = std::abs(get_position()->y - other_object.get_position()->y);
-            
+
             if (distance_x < eat_distance && distance_y < eat_distance)
             {
                 // eat the sheep
@@ -53,44 +53,43 @@ void Wolf::move()
             get_position()->y-= getVelocityY();
         }
     }
-    else
-    {
-            switch (x_move) {
-            case 0:
-                get_position()->x--;
-                break;
-            case 2:
-                get_position()->x++;
-                break;
-        }
-        switch (y_move) {
-            case 0:
-                get_position()->y--;
-                break;
-            case 2:
-                get_position()->y++;
-                break;
-        }
-    }
 
-    // Make sure the wolf stays in the frame
-    if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
-        get_position()->x = frame_width - image_ptr_->w - frame_boundary;
-        x_move = 0;
-    }
 
-    if (get_position()->x < frame_boundary){
-        get_position()->x = frame_boundary;
-        x_move = 2;
-    }
+    //         switch (x_move) {
+    //         case 0:
+    //             get_position()->x--;
+    //             break;
+    //         case 2:
+    //             get_position()->x++;
+    //             break;
+    //     }
+    //     switch (y_move) {
+    //         case 0:
+    //             get_position()->y--;
+    //             break;
+    //         case 2:
+    //             get_position()->y++;
+    //             break;
+    //     }
 
-    if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
-        get_position()->y = frame_height - image_ptr_->h - frame_boundary;
-        y_move = 0;
-    }
+    // // Make sure the wolf stays in the frame
+    // if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
+    //     get_position()->x = frame_width - image_ptr_->w - frame_boundary;
+    //     x_move = 0;
+    // }
 
-    if (get_position()->y < frame_boundary){
-        get_position()->y = frame_boundary;
-        y_move = 2;
-    }
+    // if (get_position()->x < frame_boundary){
+    //     get_position()->x = frame_boundary;
+    //     x_move = 2;
+    // }
+
+    // if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
+    //     get_position()->y = frame_height - image_ptr_->h - frame_boundary;
+    //     y_move = 0;
+    // }
+
+    // if (get_position()->y < frame_boundary){
+    //     get_position()->y = frame_boundary;
+    //     y_move = 2;
+    // }
 }

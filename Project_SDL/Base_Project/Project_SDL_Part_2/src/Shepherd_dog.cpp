@@ -4,11 +4,12 @@
 // virtual ~Shepherd_dog();
 
 void Shepherd_dog::interact(Interacting_object &other_object){
-    if (other_object.find_property("sheep")){
+    if (other_object.find_property("shepherd")){
     }
 }
 
 void Shepherd_dog::move() {
-    // Déplacement en suivant le berger
-    // ...
+    // move around the shepherd in a circle
+    // get shepherd position
+
 }

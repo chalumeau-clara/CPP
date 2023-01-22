@@ -1,9 +1,8 @@
 #include "Ground.h"
 
-
-
 Ground::Ground(SDL_Surface *window_surface_ptr) {
     window_surface_ptr_ = window_surface_ptr;
+    background = IMG_Load("../media/background.png");
 }
 
 void Ground::update()
@@ -20,8 +19,12 @@ void Ground::update()
         }
     }
 
+    SDL_Rect background_rect = {0, 0, window_surface_ptr_->w, window_surface_ptr_->h};
+    SDL_BlitScaled(background, NULL, window_surface_ptr_, &background_rect);
+    // SDL_FreeSurface(background);
     // Clear the screen
-    SDL_FillRect(window_surface_ptr_, nullptr ,SDL_MapRGB(window_surface_ptr_->format, 0xFF, 0xFF, 0xFF));
+    // SDL_FillRect(window_surface_ptr_, nullptr ,SDL_MapRGB(window_surface_ptr_->format, 0xFF, 0xFF, 0xFF));
+
     // Draw all animals
     for (auto &moving_obj : characters){
         // check if the moving object got "dead" and remove it from the list

@@ -11,6 +11,10 @@ public:
     Animal(sheep_texture_path, window_surface_ptr){
         set_property("sheep");
 
+        // Set the sheep's velocity
+        setVelocityX(1);
+        setVelocityY(1);
+
     };
     virtual void interact(Interacting_object &other_object) override;
 
@@ -18,6 +22,10 @@ public:
 
     // Fonction pour déplacement aléatoire
     void move();
+
+private:
+    SDL_Rect* nearest_wolf_position_ = nullptr;
+    
 };
 
 #endif

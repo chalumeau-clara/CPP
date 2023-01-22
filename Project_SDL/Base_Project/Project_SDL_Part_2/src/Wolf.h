@@ -15,8 +15,8 @@ class Wolf : public Animal {
                 set_property("wolf");
                 set_property("alive");
 
-                setVelocityX(1);
-                setVelocityY(1);
+                setVelocityX(2);
+                setVelocityY(2);
             };
 
         virtual ~Wolf(){};
