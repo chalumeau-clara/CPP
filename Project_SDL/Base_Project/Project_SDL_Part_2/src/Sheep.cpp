@@ -10,24 +10,22 @@ void Sheep::interact(Interacting_object &other_object){
     
     if (other_object.find_property("wolf") && !other_object.find_property("dead")){
 
-        if (nearest_wolf_position_ == nullptr)
+        if (nearest_wolf_ == nullptr)
         {
-            nearest_wolf_position_ = other_object.get_position();
+            nearest_wolf_ = &other_object;
         }
         else
         {
-            // calculate the distance between the sheep and the wolf, absolute value
-            int distance_x = std::abs(get_position()->x - nearest_wolf_position_->x);
-            int distance_y = std::abs(get_position()->y - nearest_wolf_position_->y);
+            // check if the sheep is closer than the current nearest sheep with formula distance = √((x2 - x1)² + (y2 - y1)²)
+            int new_distance = sqrt(pow(other_object.get_position()->x - this->get_position()->x, 2) + pow(other_object.get_position()->y - this->get_position()->y, 2));
+            int current_distance = sqrt(pow(nearest_wolf_->get_position()->x - this->get_position()->x, 2) + pow(nearest_wolf_->get_position()->y - this->get_position()->y, 2));
 
-            int new_distance_x = std::abs(get_position()->x - other_object.get_position()->x);
-            int new_distance_y = std::abs(get_position()->y - other_object.get_position()->y);
-
-            // compare the distance between the two wolves and update if the new wolf is closer
-            if (new_distance_x < distance_x && new_distance_y < distance_y)
+            if (current_distance > new_distance)
             {
-                nearest_wolf_position_ = other_object.get_position();
+                // update nearest wolf
+                nearest_wolf_ = &other_object;
             }
+
         }
     }
 }
@@ -35,26 +33,27 @@ void Sheep::interact(Interacting_object &other_object){
 void Sheep::move()
 {
     // if nearest wolf is not null, move away from it
-    if (nearest_wolf_position_ != nullptr)
+    if (nearest_wolf_ != nullptr )
     {
-        if (get_position()->x < nearest_wolf_position_->x)
+        if (get_position()->x < nearest_wolf_->get_position()->x)
         {
             get_position()->x-= getVelocityX();
         }
-        else if (get_position()->x > nearest_wolf_position_->x)
+        else if (get_position()->x > nearest_wolf_->get_position()->x)
         {
             get_position()->x+= getVelocityX();
         }
-        if (get_position()->y < nearest_wolf_position_->y)
+        if (get_position()->y < nearest_wolf_->get_position()->y)
         {
             get_position()->y-= getVelocityY();
         }
-        else if (get_position()->y > nearest_wolf_position_->y)
+        else if (get_position()->y > nearest_wolf_->get_position()->y)
         {
             get_position()->y+= getVelocityY();
         }
 
-        // Make sure the sheep stays in the frame
+        // Make sure the sheep stays in the frame and bounce back if it hits the boundary
+        
         if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
             get_position()->x = frame_width - image_ptr_->w - frame_boundary;
         }

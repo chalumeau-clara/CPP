@@ -297,9 +297,9 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h \
- /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Sheep.h \
- /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Application.h \
- /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Ground.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd_dog.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Shepherd.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Playable_character.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -315,9 +315,12 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Sheep.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Application.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Ground.h \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \

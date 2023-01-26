@@ -65,10 +65,10 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     for (unsigned int i = 0; i < n_wolf; ++i)
         ground_.add_character(std::make_unique<Wolf>(window_surface_ptr_));
 
-    ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_));
+    auto shepherd = std::make_shared<Shepherd>(window_surface_ptr_, window_event_);
+    ground_.add_character(shepherd);
 
-    ground_.add_character(
-            std::make_unique<Shepherd_dog>(window_surface_ptr_));
+    ground_.add_character(std::make_unique<Shepherd_dog>(window_surface_ptr_, shepherd));
 
 }
 

@@ -3763,7 +3763,27 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Shepherd_dog.cpp.o: Project_SD
   /usr/include/SDL2/SDL_misc.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h
+  /usr/include/SDL2/SDL.h \
+  Project_SDL_Part_2/src/Shepherd.h \
+  Project_SDL_Part_2/src/Playable_character.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h
 
 CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: Project_SDL_Part_2/src/Wolf.cpp \
   /usr/include/stdc-predef.h \
@@ -4125,9 +4145,9 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: Project_SDL_Part_2
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
   /usr/include/SDL2/SDL.h \
-  Project_SDL_Part_2/src/Sheep.h \
-  Project_SDL_Part_2/src/Application.h \
-  Project_SDL_Part_2/src/Ground.h \
+  Project_SDL_Part_2/src/Shepherd_dog.h \
+  Project_SDL_Part_2/src/Shepherd.h \
+  Project_SDL_Part_2/src/Playable_character.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -4146,6 +4166,9 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: Project_SDL_Part_2
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
+  Project_SDL_Part_2/src/Sheep.h \
+  Project_SDL_Part_2/src/Application.h \
+  Project_SDL_Part_2/src/Ground.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \

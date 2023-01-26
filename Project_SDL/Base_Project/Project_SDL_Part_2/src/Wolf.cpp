@@ -34,75 +34,178 @@ void Wolf::interact(Interacting_object &other_object){
 
         }
     }
+    else if (nearest_shepherd_dog_ == nullptr && other_object.find_property("shepherd_dog"))
+    {
+        // cast other object to nearest_shepherd_dog
+        nearest_shepherd_dog_ = dynamic_cast<Shepherd_dog*>(&other_object);
+
+    }
 }
 
 void Wolf::move()
 {
-    // if nearest sheep is not null, move towards it
-    if (nearest_sheep_!= nullptr)
+    // first check if nearest_shepherd_dog_ is not null and check if it is in the fear distance
+    if (nearest_shepherd_dog_ != nullptr)
     {
-        if (get_position()->x < nearest_sheep_->get_position()->x)
-        {
-            get_position()->x+= getVelocityX();
-        }
-        else if (get_position()->x > nearest_sheep_->get_position()->x)
-        {
-            get_position()->x-= getVelocityX();
-        }
-        if (get_position()->y < nearest_sheep_->get_position()->y)
-        {
-            get_position()->y+= getVelocityY();
-        }
-        else if (get_position()->y > nearest_sheep_->get_position()->y)
-        {
-            get_position()->y-= getVelocityY();
-        }
-    }
-    else
-    {
-        // if nearest sheep is null, move randomly
-        int x_move = rand() % 3;
-        int y_move = rand() % 3;
+        int distance = sqrt(pow(nearest_shepherd_dog_->get_position()->x - this->get_position()->x, 2) + pow(nearest_shepherd_dog_->get_position()->y - this->get_position()->y, 2));
 
-        switch (x_move) {
-            case 0:
+        if (distance <= fear_distance_wolf)
+        {
+            // move away from shepherd dog
+            if (get_position()->x < nearest_shepherd_dog_->get_position()->x)
+            {
                 get_position()->x-= getVelocityX();
-                break;
-            case 2:
+            }
+            else if (get_position()->x > nearest_shepherd_dog_->get_position()->x)
+            {
                 get_position()->x+= getVelocityX();
-                break;
-        }
-        switch (y_move) {
-            case 0:
+            }
+            if (get_position()->y < nearest_shepherd_dog_->get_position()->y)
+            {
                 get_position()->y-= getVelocityY();
-                break;
-            case 2:
+            }
+            else if (get_position()->y > nearest_shepherd_dog_->get_position()->y)
+            {
                 get_position()->y+= getVelocityY();
-                break;
+            }
         }
+        else
+        {
+            // if nearest shepherd dog is not in fear distance, move towards nearest sheep
+            if (nearest_sheep_!= nullptr)
+            {
+                if (get_position()->x < nearest_sheep_->get_position()->x)
+                {
+                    get_position()->x+= getVelocityX();
+                }
+                else if (get_position()->x > nearest_sheep_->get_position()->x)
+                {
+                    get_position()->x-= getVelocityX();
+                }
+                if (get_position()->y < nearest_sheep_->get_position()->y)
+                {
+                    get_position()->y+= getVelocityY();
+                }
+                else if (get_position()->y > nearest_sheep_->get_position()->y)
+                {
+                    get_position()->y-= getVelocityY();
+                }
+            }
+            else
+            {
+                // if nearest sheep is null, move randomly
+                int x_move = rand() % 3;
+                int y_move = rand() % 3;
 
-        // Make sure the wolf stays in the frame
-        if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
-            get_position()->x = frame_width - image_ptr_->w - frame_boundary;
-            x_move = 0;
+                switch (x_move) {
+                    case 0:
+                        get_position()->x-= getVelocityX();
+                        break;
+                    case 2:
+                        get_position()->x+= getVelocityX();
+                        break;
+                }
+                switch (y_move) {
+                    case 0:
+                        get_position()->y-= getVelocityY();
+                        break;
+                    case 2:
+                        get_position()->y+= getVelocityY();
+                        break;
+                }
+
+                // Make sure the wolf stays in the frame
+                if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
+                    get_position()->x = frame_width - image_ptr_->w - frame_boundary;
+                    x_move = 0;
+                }
+
+                if (get_position()->x < frame_boundary){
+                    get_position()->x = frame_boundary;
+                    x_move = 2;
+                }
+
+                if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
+                    get_position()->y = frame_height - image_ptr_->h - frame_boundary;
+                    y_move = 0;
+                }
+
+                if (get_position()->y < frame_boundary){
+                    get_position()->y = frame_boundary;
+                    y_move = 2;
+                }
+            }
         }
-
-        if (get_position()->x < frame_boundary){
-            get_position()->x = frame_boundary;
-            x_move = 2;
-        }
-
-        if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
-            get_position()->y = frame_height - image_ptr_->h - frame_boundary;
-            y_move = 0;
-        }
-
-        if (get_position()->y < frame_boundary){
-            get_position()->y = frame_boundary;
-            y_move = 2;
-        }
-
     }
+    
+
+
+
+    // // if nearest sheep is not null, move towards it
+    // if (nearest_sheep_!= nullptr)
+    // {
+    //     if (get_position()->x < nearest_sheep_->get_position()->x)
+    //     {
+    //         get_position()->x+= getVelocityX();
+    //     }
+    //     else if (get_position()->x > nearest_sheep_->get_position()->x)
+    //     {
+    //         get_position()->x-= getVelocityX();
+    //     }
+    //     if (get_position()->y < nearest_sheep_->get_position()->y)
+    //     {
+    //         get_position()->y+= getVelocityY();
+    //     }
+    //     else if (get_position()->y > nearest_sheep_->get_position()->y)
+    //     {
+    //         get_position()->y-= getVelocityY();
+    //     }
+    // }
+    // else
+    // {
+    //     // if nearest sheep is null, move randomly
+    //     int x_move = rand() % 3;
+    //     int y_move = rand() % 3;
+
+    //     switch (x_move) {
+    //         case 0:
+    //             get_position()->x-= getVelocityX();
+    //             break;
+    //         case 2:
+    //             get_position()->x+= getVelocityX();
+    //             break;
+    //     }
+    //     switch (y_move) {
+    //         case 0:
+    //             get_position()->y-= getVelocityY();
+    //             break;
+    //         case 2:
+    //             get_position()->y+= getVelocityY();
+    //             break;
+    //     }
+
+    //     // Make sure the wolf stays in the frame
+    //     if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
+    //         get_position()->x = frame_width - image_ptr_->w - frame_boundary;
+    //         x_move = 0;
+    //     }
+
+    //     if (get_position()->x < frame_boundary){
+    //         get_position()->x = frame_boundary;
+    //         x_move = 2;
+    //     }
+
+    //     if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
+    //         get_position()->y = frame_height - image_ptr_->h - frame_boundary;
+    //         y_move = 0;
+    //     }
+
+    //     if (get_position()->y < frame_boundary){
+    //         get_position()->y = frame_boundary;
+    //         y_move = 2;
+    //     }
+
+    // }
 
 
     //         switch (x_move) {

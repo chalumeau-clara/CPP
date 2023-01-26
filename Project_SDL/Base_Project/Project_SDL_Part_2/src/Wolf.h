@@ -2,10 +2,12 @@
 #define WOLF_H
 
 #include "Animal.h"
+
+#include "Shepherd_dog.h"
 #include "Sheep.h"
 
-const int eat_distance = 1;
-const int fear_distance = 10;
+const int eat_distance = 15;
+const int fear_distance_wolf = 250;
 
 class Wolf : public Animal {
     public:
@@ -27,7 +29,9 @@ class Wolf : public Animal {
         virtual void interact(Interacting_object &other_object) override;
 
     private:
+        // create a pointer to the nearest sheep
         Sheep* nearest_sheep_ = nullptr;
+        Shepherd_dog* nearest_shepherd_dog_ = nullptr;
 
     };
 

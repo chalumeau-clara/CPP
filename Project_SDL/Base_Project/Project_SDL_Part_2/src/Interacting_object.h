@@ -47,6 +47,11 @@ class Interacting_object {
             return position_;
         };
 
+        void set_position(int x, int y) {
+            position_->x = x;
+            position_->y = y;
+        };
+
     private:
         std::set<std::string> properties_;
         SDL_Rect *position_; // Position of the object

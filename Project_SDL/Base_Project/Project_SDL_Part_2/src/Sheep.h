@@ -2,6 +2,11 @@
 #define SHEEP_H
 
 #include "Animal.h"
+// #include "Wolf.h"
+// class Wolf;
+
+const int fear_distance = 200;
+
 
 class Sheep : public Animal {
 public:
@@ -24,7 +29,7 @@ public:
     void move();
 
 private:
-    SDL_Rect* nearest_wolf_position_ = nullptr;
+    Interacting_object* nearest_wolf_ = nullptr;
     
 };
 
