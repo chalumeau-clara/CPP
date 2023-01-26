@@ -20,8 +20,8 @@ public:
     void set_nb_shephered_dog(uint64_t nb);
     uint64_t get_nb_shephered_dog();
     // std::vector<std::shared_ptr<Animal>>& getAnimals();
-    void add_character(std::shared_ptr<Moving_object>);
-    // void removeAnimals(std::shared_ptr<Animal>);
+    void add_character(std::shared_ptr<Moving_object> character);
+    void removeAnimal(std::shared_ptr<Moving_object> character);
 
 protected:
     // Attention, NON-OWNING ptr, again to the screen

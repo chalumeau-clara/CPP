@@ -1184,7 +1184,9 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o: Project_SDL_Part
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  Project_SDL_Part_2/src/Sheep.h \
+  Project_SDL_Part_2/src/Animal.h
 
 CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Interacting_object.cpp.o: Project_SDL_Part_2/src/Interacting_object.cpp \
   /usr/include/stdc-predef.h \
@@ -4123,6 +4125,7 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Wolf.cpp.o: Project_SDL_Part_2
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
   /usr/include/SDL2/SDL.h \
+  Project_SDL_Part_2/src/Sheep.h \
   Project_SDL_Part_2/src/Application.h \
   Project_SDL_Part_2/src/Ground.h \
   /usr/include/c++/11/memory \

@@ -328,4 +328,6 @@ CMakeFiles/SDL_project.dir/Project_SDL_Part_2/src/Ground.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Sheep.h \
+ /home/clarel-salassa/Desktop/Clara/CPP/Project_SDL/Base_Project/Project_SDL_Part_2/src/Animal.h

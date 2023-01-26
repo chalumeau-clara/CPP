@@ -53,6 +53,25 @@ void Sheep::move()
         {
             get_position()->y+= getVelocityY();
         }
+
+        // Make sure the sheep stays in the frame
+        if (get_position()->x + image_ptr_->w > frame_width - frame_boundary) {
+            get_position()->x = frame_width - image_ptr_->w - frame_boundary;
+        }
+
+        if (get_position()->x < frame_boundary){
+            get_position()->x = frame_boundary;
+        }
+
+        if (get_position()->y + image_ptr_->h > frame_height - frame_boundary) {
+            get_position()->y = frame_height - image_ptr_->h - frame_boundary;
+        }
+
+        if (get_position()->y < frame_boundary){
+            get_position()->y = frame_boundary;
+        }
+
+        
     }
     else
     {

@@ -2,6 +2,7 @@
 #define WOLF_H
 
 #include "Animal.h"
+#include "Sheep.h"
 
 const int eat_distance = 1;
 const int fear_distance = 10;
@@ -26,7 +27,7 @@ class Wolf : public Animal {
         virtual void interact(Interacting_object &other_object) override;
 
     private:
-        SDL_Rect* nearest_sheep_position_ = nullptr;
+        Sheep* nearest_sheep_ = nullptr;
 
     };
 

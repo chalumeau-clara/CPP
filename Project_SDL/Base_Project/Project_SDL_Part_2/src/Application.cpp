@@ -61,11 +61,9 @@ Application::Application(unsigned int n_sheep, unsigned int n_wolf) {
     ground_.set_nb_wolf(n_wolf);
     // Create the animals
     for (unsigned int i = 0; i < n_sheep; ++i)
-        ground_.add_character(
-                std::make_unique<Sheep>(window_surface_ptr_));
+        ground_.add_character(std::make_unique<Sheep>(window_surface_ptr_));
     for (unsigned int i = 0; i < n_wolf; ++i)
-        ground_.add_character(
-                std::make_unique<Wolf>(window_surface_ptr_));
+        ground_.add_character(std::make_unique<Wolf>(window_surface_ptr_));
 
     ground_.add_character(std::make_unique<Shepherd>(window_surface_ptr_, window_event_));
 
