@@ -1,9 +1,11 @@
 #include "Ground.h"
 #include "Sheep.h"
 
+const char *background_texture_path = "media/background.png";
+
 Ground::Ground(SDL_Surface *window_surface_ptr) {
     window_surface_ptr_ = window_surface_ptr;
-    background = IMG_Load("../media/background.png");
+    background = IMG_Load(background_texture_path);
 }
 
 // remove the animal from the ground

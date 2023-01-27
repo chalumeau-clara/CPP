@@ -1,3 +1,0 @@
-/home/clara/Projet/CPP/Project_SDL/Base_Project/cmake-build-debug/CMakeFiles/SDL_project.dir
-/home/clara/Projet/CPP/Project_SDL/Base_Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/clara/Projet/CPP/Project_SDL/Base_Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

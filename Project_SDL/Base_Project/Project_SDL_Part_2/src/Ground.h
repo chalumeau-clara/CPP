@@ -6,8 +6,6 @@
 #include <memory>
 #include <iostream>
 
-const std::string background_texture_path = "../media/background.jpg";
-
 class Ground {
 public:
     // Constructeur

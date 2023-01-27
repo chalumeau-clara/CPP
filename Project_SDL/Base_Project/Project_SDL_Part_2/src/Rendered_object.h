@@ -7,10 +7,10 @@
 #include <SDL2/SDL.h>
 
 // Path to textures
-const std::string sheep_texture_path = "../media/sheep.png";
-const std::string wolf_texture_path = "../media/wolf.png";
-const std::string shepherd_dog_texture_path = "../media/shepherd_dog.png";
-const std::string shepherd_texture_path = "../media/shepherd.png";
+const std::string sheep_texture_path = "media/sheep.png";
+const std::string wolf_texture_path = "media/wolf.png";
+const std::string shepherd_dog_texture_path = "media/shepherd_dog.png";
+const std::string shepherd_texture_path = "media/shepherd.png";
 
 class Rendered_object : public Interacting_object {
 public:

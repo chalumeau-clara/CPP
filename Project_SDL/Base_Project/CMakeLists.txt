@@ -23,9 +23,8 @@ add_executable(SDL_project
         Project_SDL_Part_2/src/Moving_object.cpp
         Project_SDL_Part_2/src/Wolf.cpp Project_SDL_Part_2/src/Ground.cpp)
 
-
 # add memory leak detection
-target_compile_options(SDL_project PRIVATE -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer)
+target_compile_options(SDL_project PRIVATE -Wall -Wextra -Werror -pedantic -fno-omit-frame-pointer -g)
 
 # Pour MacOS
 target_include_directories(SDL_project PRIVATE ${SDL2_INCLUDE_DIRS} SDL2_image) # ajoute les include de SDL2 -> necessaire car SDL2 n'est pas un target
